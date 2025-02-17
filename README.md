@@ -1,3 +1,4 @@
+## This is a live chat web application and as the name suggests it is meant for chatting and texting with most of the resources being free to use thus it won't support a large number of users 
 import express from 'express';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.route.js';
