@@ -12,7 +12,7 @@ import { useEffect } from 'react'
 const App = () => {
   const {checkAuth,authUser} = useAuthStore();
   useEffect (()=>{
-    checkAuth();
+    checkAuth;
   },[checkAuth]);
 
   console.log(authUser);
@@ -31,7 +31,6 @@ const App = () => {
         <Route path="/profile" element={<ProfilePage />} />
 
       </Routes>
-
         
     </div>
   )
