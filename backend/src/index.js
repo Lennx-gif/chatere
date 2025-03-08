@@ -9,15 +9,22 @@ const app = express();
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
+connectDB();
 
 app.use('/api/auth',authRoutes);
 app.use('/api/message', messageRoutes);
+app.use (express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
+
+app.get("/", (req, res) => {
+    res.send("Backend is running successfully!");
+});
 
 
 app.listen(PORT, () => {
     console.log("Server is running on PORT:" + PORT);
-    connectDB();
+    
 });
 
